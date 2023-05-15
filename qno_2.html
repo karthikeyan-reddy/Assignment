@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Page</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function submit()
+        {
+          alert("Form Submitted!!");
+        }
+        function checking()
+        {
+            if(document.getElementById("validation").checked = true)
+           {
+            document.getElementById("txtpin").innerHTML = "Required";
+           }
+           else{
+            alert("Not Needed");
+           }
+        }
+    </script>
+</head>
+<body>
+    <h2>Validate Me !!</h2>
+    <form>
+    <p>UserName<input type="text" minlength="6" maxlength="8" id="txtname"></p>
+    <p> Pin
+    <input type="password" id="txtpin" >
+    </p>
+    <p>
+        <label for="state">State</label>
+        <select name="state" id="state">
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Tamilnadu">Tamilnadu</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="WestBengal">WestBengal</option>
+        </select>
+    </p>
+    <p style="padding:25px;">
+        <button onclick="submit()">Check Form</button>
+    </p>
+    <p>
+        <input type="checkbox" onclick="checking()" name="checkbox" id="validation" value="Check">Validate Pin
+    </p>
+    <p>
+        <input type="radio" name="interest" id="select">Milk
+        <input type="radio" name="interest" id="select">Butter
+        <input type="radio" name="interest" id="select">Cheese
+    </p>
+    </form>
+</body>
+</html>
